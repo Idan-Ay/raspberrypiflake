@@ -24,6 +24,7 @@
           modules = [
             inputs.disko.nixosModules.disko
             ./system.nix
+            .hardware-configuration.nix
           ];
         };
       };

@@ -1,0 +1,3 @@
+{
+  throw "home.nix called"
+}
