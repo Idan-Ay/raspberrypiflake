@@ -6,12 +6,23 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
     # nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+  };
+
+  nixConfig = {
+    extra-substituters = [
+      "https://nixos-raspberrypi.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nixos-raspberrypi.cachix.org-1:4iMO9LXa8BqhU+Rpg6LQKiGa2lsNh/j2oiYLNOQ5sPI="
+    ];
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    nixos-raspberrypi,
     ...
     } @ inputs:
     let

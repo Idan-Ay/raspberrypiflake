@@ -5,4 +5,6 @@
     efiSupport = true;
     efiInstallAsRemovable = true;
   };
+
+  networking.hostName = "yourHostName";
 }

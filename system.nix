@@ -1,5 +1,6 @@
 {
   modulesPath,
+  raspberry-pi-5,
   lib,
   pkgs,
   ...
@@ -8,6 +9,8 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
+    raspberry-pi-5.base
+    raspberry-pi-5.bluetooth
     ./disk-config.nix
   ];
   boot.loader.grub = {
