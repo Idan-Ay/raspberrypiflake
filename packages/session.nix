@@ -6,5 +6,7 @@
     efiInstallAsRemovable = true;
   };
 
-  networking.hostName = "yourHostName";
+  programs.fish.enable = true;
+
+  networking.hostName = "raspberrypi";
 }
