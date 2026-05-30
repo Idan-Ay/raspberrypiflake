@@ -31,7 +31,7 @@
       nixosConfigurations = {
         rpi5 = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
-          # specialArgs = { inherit inputs user; };
+          specialArgs = { inherit inputs user nixos-raspberrypi; };
           modules = [
             inputs.disko.nixosModules.disko
             ./system.nix
